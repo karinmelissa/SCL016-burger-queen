@@ -4,3 +4,6 @@ body{
 .whiteText{
   color: white;
 }
+.menuOptionsButton{
+  background-color: yellow;
+}
