@@ -4,6 +4,7 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
+    "site": "miti-mota",
     "public": "public",
     "ignore": [
       "firebase.json",
