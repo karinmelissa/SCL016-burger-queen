@@ -3,43 +3,46 @@ import data from '../menu.json';
 import MenuDrinksButton from './MenuDrinksButton.js';
 import MenuPizzaButton from './MenuPizzaButton.js';
 import MenuExtrasButton from './MenuExtrasButton.js';
+import ProductCard from './ProductCard.js';
 
 
-const Menu = (props) => {
+const Menu = () => {
     const MenuPizzeria = data.filter((items) => items.category === "Pizza");
     const MenuBebestible = data.filter((items) => items.category === "Bebestible");
     const MenuAgregados = data.filter((items) => items.category === "Agregados");
     const [options, setOptions] = useState(MenuPizzeria);
+    const [category, setCategory] = useState("Pizza");
 
 
     const drinkClick = () => {
         setOptions(MenuBebestible);
+        setCategory("Bebestibles")
     };
     const pizzaClick = () => {
         setOptions(MenuPizzeria);
+        setCategory("Pizza")
     };
     const extrasClick = () => {
         setOptions(MenuAgregados);
+        setCategory("Agregados")
     };
     
     
     const manageOptions = ()=>{
-        return <>
+        return <div>
         <MenuPizzaButton onClick={()=>pizzaClick()}/>
         <MenuDrinksButton onClick={()=>drinkClick()} />
         <MenuExtrasButton onClick={()=>extrasClick()}/>
-        </>
+        </div>
     }
 
     const renderedGoods = options.map(item => {
-        return <>
-        <h1 className="whiteText" key={item.id}>{item.name}</h1>
-        {/* <h2 className="whiteText" key={item.id}>{item.prices.medium ? true : item.prices.medium}</h2>
-        //<p className="whiteText" key={item.id}>{item.ingredients || item.options}</p> */}
-        </>
+        return <ProductCard key={item.id}item={item} category={category}/>
     })
-    return <div>
-        {manageOptions()}{renderedGoods}</div>
+    return <>
+        {manageOptions()}
+        <div className="menuItemsContainer">{renderedGoods}</div>
+        </>
 
 
 }

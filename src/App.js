@@ -1,20 +1,28 @@
 import './App.css';
-import MyNewComponent from './components/MyNewComponent.js';
-import Home from './components/Home.js';
+import Home from './views/Home.js';
 import OrderMenu from './views/OrderMenu.js';
-import { Router } from '@reach/router';
-import Login from './views/Login.js';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  NavLink
+} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Login path="/"/>
-        <Home path="/home"/>
-        <OrderMenu path="/menu"/>
+        <Switch>
+          <Route path="/order">
+            <OrderMenu />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
       </Router>
     </div>
-    
   );
 }
 

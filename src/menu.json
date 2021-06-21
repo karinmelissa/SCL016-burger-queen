@@ -4,55 +4,35 @@
     "category": "Pizza",
     "name": "Margarita",
     "ingredients": "Salsa pomodoro - Mozzarella - Oliva - Albhaca",
-    "prices": {
-        "individual": 4200,
-        "medium": 6710,
-        "large": 8900
-    }
-},
+    "price": 6710
+    },
 {
     "id": "p2",
     "category": "Pizza",
     "name": "Fugazza",
     "ingredients": "Doble mozzarella - Oliva - Cebolla blanca - Cebolla morada - Aceituna verde",
-    "prices": {
-        "individual": 4500,
-        "medium": 7000,
-        "large": 9000
-    }
+    "price":  7000
 },
 {
     "id": "p3",
     "category": "Pizza",
     "name": "Vegetariana",
     "ingredients": "Salsa pomodoro - Mozzarella - Champiñones - Rucula - Tomate Cherry - Choclo",
-    "prices": {
-        "individual": 4500,
-        "medium": 7100,
-        "large": 9400
-    }
+    "price": 7100
 },
 {
     "id": "p4",
     "category": "Pizza",
     "name": "Salame",
     "ingredients": "Salsa pomodoro - Mozzarella - Oliva - Salame - Cebolla morada - Aceituna negra",
-    "prices": {
-        "individual": 4800,
-        "medium": 7600,
-        "large": 9700
-    }
+    "price":  7600
 },
 {
     "id": "p5",
     "category": "Pizza",
     "name": "Fresca",
     "ingredients": "Salsa pomodoro - Mozzarella - Oliva - Tomate Cherry - Pimenton - Jamon",
-    "prices": {
-        "individual": 4800,
-        "medium": 7600,
-        "large": 9700
-    }
+    "price": 7600
 },
 {
     "id": "b1",
