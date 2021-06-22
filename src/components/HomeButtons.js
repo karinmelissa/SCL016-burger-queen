@@ -1,13 +1,22 @@
-import React from 'react';
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import ClientModal from './ClientNameModal.js';
 
 export default function HomeButtons() {
 
-    return (
-        <div className="homeButtons"> 
-           <h2 className="secondaryHeadline">Acceso exclusivo empleados</h2>
-           <Link to="/order"><button className="OptionsButton">Ingresar nuevo pedido</button></Link>
-           <button className="OptionsButton">Pedidos pendientes</button>
-        </div>
-    )
+  const [showModal, setShowModal] = useState(false);
+  const openModal = () => {
+    setShowModal(prev => !prev);
+  };
+
+
+  return (
+    <>
+    <div className="homeButtons">
+      <h2 className="secondaryHeadline">Acceso exclusivo empleados</h2>
+      <button onClick={openModal} className="OptionsButton">Ingresar nuevo pedido</button>
+      <button className="OptionsButton">Pedidos pendientes</button>
+    </div>
+    <ClientModal  showModal={showModal} setShowModal={setShowModal} />
+    </>
+  )
 }

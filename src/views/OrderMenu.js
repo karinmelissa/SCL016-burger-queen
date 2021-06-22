@@ -6,13 +6,13 @@ import ClienteOrder from '../components/ClientOrder.js';
 //import uuidv4 from 'uuid/v4'
 
 export default function OrderMenu() {
-    return (
-        <div>
-            <Header/>
-            <div className="orderMenu">
-            <Menu/>
-            <ClienteOrder/>
-            </div>
-        </div>
-    )
+  return (
+    <div>
+      <Header />
+      <div className="orderMenu">
+        <Menu />
+        <ClienteOrder />
+      </div>
+    </div>
+  )
 }

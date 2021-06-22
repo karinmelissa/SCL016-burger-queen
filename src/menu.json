@@ -1,73 +1,73 @@
 [
-    {
+  {
     "id": "p1",
     "category": "Pizza",
     "name": "Margarita",
     "ingredients": "Salsa pomodoro - Mozzarella - Oliva - Albhaca",
     "price": 6710
-    },
-{
+  },
+  {
     "id": "p2",
     "category": "Pizza",
     "name": "Fugazza",
     "ingredients": "Doble mozzarella - Oliva - Cebolla blanca - Cebolla morada - Aceituna verde",
-    "price":  7000
-},
-{
+    "price": 7000
+  },
+  {
     "id": "p3",
     "category": "Pizza",
     "name": "Vegetariana",
     "ingredients": "Salsa pomodoro - Mozzarella - Champiñones - Rucula - Tomate Cherry - Choclo",
     "price": 7100
-},
-{
+  },
+  {
     "id": "p4",
     "category": "Pizza",
     "name": "Salame",
     "ingredients": "Salsa pomodoro - Mozzarella - Oliva - Salame - Cebolla morada - Aceituna negra",
-    "price":  7600
-},
-{
+    "price": 7600
+  },
+  {
     "id": "p5",
     "category": "Pizza",
     "name": "Fresca",
     "ingredients": "Salsa pomodoro - Mozzarella - Oliva - Tomate Cherry - Pimenton - Jamon",
     "price": 7600
-},
-{
+  },
+  {
     "id": "b1",
     "category": "Bebestible",
     "name": "Bebidas",
     "options": [
-        "Coca-cola",
-        "Sprite",
-        "Canada dry",
-        "Fanta"
+      "Coca-cola",
+      "Sprite",
+      "Canada dry",
+      "Fanta"
     ],
     "price": 1500
-},
-{
+  },
+  {
     "id": "b2",
     "category": "Bebestible",
     "name": "Jugo Natual",
     "options": [
-        "Mango",
-        "Frambueza",
-        "Piña",
-        "Limonada"
+      "Mango",
+      "Frambueza",
+      "Piña",
+      "Limonada"
     ],
     "price": 2000
-},
-{
+  },
+  {
     "id": "a1",
     "category": "Agregados",
     "name": "Rollitos de canela",
     "price": 2000
-},
-{
+  },
+  {
     "id": "a2",
     "category": "Agregados",
     "name": "Palitos de ajo",
     "price": 3000
-}
+  }
 ]
