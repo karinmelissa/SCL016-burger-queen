@@ -29,7 +29,7 @@ const Menu = () => {
     
     
     const manageOptions = ()=>{
-        return <div>
+        return <div className="menuButtons">
         <MenuPizzaButton onClick={()=>pizzaClick()}/>
         <MenuDrinksButton onClick={()=>drinkClick()} />
         <MenuExtrasButton onClick={()=>extrasClick()}/>
@@ -40,10 +40,10 @@ const Menu = () => {
         return <ProductCard key={item.id}item={item} category={category}/>
     })
     return <>
-        {manageOptions()}
-        <div className="menuItemsContainer">{renderedGoods}</div>
-        </>
-
-
+    <div className="menuContainer">
+    {manageOptions()}
+    <section className="menuItemsContainer">{renderedGoods}</section>
+    </div>
+    </>
 }
 export default Menu;

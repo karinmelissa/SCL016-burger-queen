@@ -13,8 +13,11 @@ body{
   align-items: center;
   margin: 15% 0px;
 }
-.whiteText{
+.menuItem {
   color: white;
+}
+.menuItemPrice{
+  color: rgb(254, 229, 64);
 }
 .OptionsButton{
   background-color:rgb(254, 229, 64);
@@ -27,13 +30,17 @@ body{
 }
 .menuItemsContainer{
   background-color: rgb(81, 79, 79);
-  width: 70%;
   border-radius: 10px;
   height: 70vh;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  /*justify-content: space-evenly;*/
 }
 .productCard{
   display: grid;
   grid-template-columns: 1fr .3fr;
+  margin: 5px 0px;
 }
 .mitiMotaLogo{
   max-width: 300px;
@@ -52,4 +59,25 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.header , .menuLogo{
+  height: 50px;
+  margin: 5px;
+}
+.clientOrder{
+  background-color: white;
+  width: 30%;
+  border-radius: 10px;
+}
+.menuContainer{
+  width: 60%;
+}
+.orderMenu{
+  display: flex;
+  justify-content: space-evenly;
+}
+.menuButtons{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 15px;
 }
