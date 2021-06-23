@@ -4,9 +4,7 @@ import OrderMenu from './views/OrderMenu.js';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link,
-  NavLink
+  Route 
 } from "react-router-dom";
 
 function App() {

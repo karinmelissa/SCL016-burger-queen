@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import ClientModal from './ClientNameModal.js';
 
-export default function HomeButtons() {
-
+const HomeButtons=()=> {
   const [showModal, setShowModal] = useState(false);
   const openModal = () => {
     setShowModal(prev => !prev);
   };
-
 
   return (
     <>
@@ -20,3 +18,4 @@ export default function HomeButtons() {
     </>
   )
 }
+export default HomeButtons;
