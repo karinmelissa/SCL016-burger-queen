@@ -6,12 +6,14 @@ import MenuExtrasButton from './MenuExtrasButton.js';
 import ProductCard from './ProductCard.js';
 
 
-const Menu = () => {
+const Menu = (props) => {
+  const {order , setOrder} = props;
   const MenuPizzeria = data.filter((items) => items.category === "Pizza");
   const MenuBebestible = data.filter((items) => items.category === "Bebestible");
   const MenuAgregados = data.filter((items) => items.category === "Agregados");
   const [options, setOptions] = useState(MenuPizzeria);
   const [category, setCategory] = useState("Pizza");
+
 
   const drinkClick = () => {
     setOptions(MenuBebestible);
@@ -35,7 +37,7 @@ const Menu = () => {
   }
 
   const renderedGoods = options.map(item => {
-    return <ProductCard key={item.id} item={item} category={category} />
+    return <ProductCard key={item.id} item={item} category={category} order={order} setOrder={setOrder}/>
   })
   return <>
     <div className="menuContainer">

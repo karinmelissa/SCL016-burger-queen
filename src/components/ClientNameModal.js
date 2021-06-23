@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { db } from '../fireBaseConfig.js';
 import { useHistory } from "react-router-dom";
 import { v4 as uuid_v4 } from "uuid";
 
@@ -11,21 +10,9 @@ const ClientModal = ({ showModal , setShowModal }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (clientName !== "") {
-      return db
-        .collection('orders')
-        .add({
-          orderId : orderId,
-          client: clientName,
-          order : [],
-        })
-        .then(
-          localStorage.setItem('orderId', orderId),
-          console.log("cliente creado" + localStorage.getItem('orderId')),
-          history.push("/order")
-        )
-        .catch((error) => {
-          console.error('Error writing new message to database', error);
-        });
+      return (localStorage.setItem('orderId', orderId),
+      localStorage.setItem('clientName', clientName),
+      history.push("/order"))
     }
   };
   const closeModal = ()=>{

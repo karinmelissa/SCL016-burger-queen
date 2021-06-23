@@ -1,21 +1,19 @@
-import React  from 'react';
+import React, { useState }  from 'react';
 import { db } from '../fireBaseConfig.js';
 
 const ClienteOrder = (props) => {
-  console.log(localStorage.getItem('orderId'))
-  const database = db.collection('orders').where('orderId', '==', localStorage.getItem('orderId'))
-  const clientName = database.get().then((querySnapshot) =>  { 
-    querySnapshot.forEach((doc) =>{
-      return doc.data().client
-    })
-    })
-    .catch(error => {
-      console.log(error)
-    })
-  console.log(clientName)  
+  const {order , setOrder} = props;
+  console.log(order)
+  
   return (
     <aside className="clientOrder">
-      <h2>Nombre cliente</h2>
+      <h2>{props.name}</h2>
+      {order.map( item =>(
+        <div className="cartItems">
+        <p>{item.name}</p>
+        <p>${item.price} <i className="far fa-trash-alt"></i></p>
+        </div>
+      ))}
     </aside>
   )
 }

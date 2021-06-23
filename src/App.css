@@ -16,8 +16,9 @@ body{
 .menuItem {
   color: white;
 }
-.menuItemPrice{
+.menuItemPrice , .fa-plus-circle{
   color: rgb(254, 229, 64);
+  margin: auto;
 }
 .OptionsButton{
   background-color:rgb(254, 229, 64);
@@ -39,7 +40,7 @@ body{
 }
 .productCard{
   display: grid;
-  grid-template-columns: 1fr .3fr;
+  grid-template-columns: 1fr .3fr .1fr;
   margin: 5px 0px;
 }
 .mitiMotaLogo{
@@ -68,6 +69,8 @@ body{
   background-color: white;
   width: 30%;
   border-radius: 10px;
+  padding: 15px;
+  box-sizing: border-box;
 }
 .menuContainer{
   width: 60%;
@@ -111,4 +114,9 @@ body{
 .fa-times-circle{
   position: relative;
   left: 45%;
+}
+.cartItems{
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0px;
 }
