@@ -4,16 +4,27 @@ const ProductCard = (props) => {
   const {order , setOrder} = props;
 
   const addCart = (item) => {
-    console.log('clicked ' + item.name)
-    const newOrder = [
-      ...order,
-      {
-        name: item.name,
-        price: item.price,
-        id: item.id,
-      },
-    ];
-    setOrder(newOrder);
+    if(order.some( elem => elem.id === item.id)){
+      //Se me actualizan el carrito de compras solo al agregar nuevos productos :c
+      order.map((elem)=> {
+        if(elem.id === item.id){
+          elem.quantity ++;
+        }
+      });
+      setOrder(order);
+    }
+    else{
+      const newOrder = [
+        ...order,
+        {
+          name: item.name,
+          price: item.price,
+          id: item.id,
+          quantity : 1
+        },
+      ];
+      setOrder(newOrder);
+    }
   }
 
   //switch case for category 
