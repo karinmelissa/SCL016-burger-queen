@@ -1,5 +1,4 @@
-import React, { useState }  from 'react';
-import { db } from '../fireBaseConfig.js';
+import React  from 'react';
 
 const ClienteOrder = (props) => {
   const {order , setOrder} = props;
@@ -19,7 +18,6 @@ const ClienteOrder = (props) => {
       setOrder(newOrder);
     }
   }
-  //const totalOrder = 
 
   return (
     <aside className="clientOrder">
@@ -31,7 +29,6 @@ const ClienteOrder = (props) => {
         <p>${item.price * item.quantity} <i className="far fa-trash-alt" onClick={() => removeItem(item)}></i></p>
         </div>
       ))}
-      <h3>Total : $</h3>
     </aside>
   )
 }
