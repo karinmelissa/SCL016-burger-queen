@@ -3,7 +3,7 @@ import React  from 'react';
 const ClienteOrder = (props) => {
   const {order , setOrder} = props;
   const removeItem =(item)=>{
-    const removedItem = order.filter(elem => elem.id == item.id);
+    const removedItem = order.filter(elem => elem.id === item.id);
     //Se me actualizan el carrito de compras solo al agregar nuevos productos :c
     if(removedItem[0].quantity >=2){
       order.map((elem)=> {

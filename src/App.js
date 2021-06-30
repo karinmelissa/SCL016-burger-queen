@@ -1,6 +1,7 @@
 import './App.css';
 import Home from './views/Home.js';
 import OrderMenu from './views/OrderMenu.js';
+import KitchenView from './views/KitchenView.js';
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,6 +15,9 @@ function App() {
         <Switch>
           <Route path="/order">
             <OrderMenu />
+          </Route>
+          <Route path="/pending">
+            <KitchenView />
           </Route>
           <Route path="/">
             <Home />

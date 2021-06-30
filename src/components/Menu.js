@@ -5,7 +5,6 @@ import MenuPizzaButton from './MenuPizzaButton.js';
 import MenuExtrasButton from './MenuExtrasButton.js';
 import ProductCard from './ProductCard.js';
 
-
 const Menu = (props) => {
   const {order , setOrder} = props;
   const MenuPizzeria = data.filter((items) => items.category === "Pizza");
@@ -13,7 +12,6 @@ const Menu = (props) => {
   const MenuAgregados = data.filter((items) => items.category === "Agregados");
   const [options, setOptions] = useState(MenuPizzeria);
   const [category, setCategory] = useState("Pizza");
-
 
   const drinkClick = () => {
     setOptions(MenuBebestible);

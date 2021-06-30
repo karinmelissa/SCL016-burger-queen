@@ -1,17 +1,14 @@
 import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
-import { v4 as uuid_v4 } from "uuid";
 
 const ClientModal = ({ showModal , setShowModal }) => {
   const [clientName, setClientName] = useState("");
   let history = useHistory();
-  const orderId = uuid_v4() ;
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (clientName !== "") {
-      return (localStorage.setItem('orderId', orderId),
-      localStorage.setItem('clientName', clientName),
+      return (localStorage.setItem('clientName', clientName),
       history.push("/order"))
     }
   };
@@ -31,6 +28,5 @@ const ClientModal = ({ showModal , setShowModal }) => {
     </form> : null}
     </>
   );
-
 }
 export default ClientModal;
